@@ -3,7 +3,7 @@ import bodyParser from 'body-parser';
 import pacientesRoutes from './routes/pacientesRoutes';
 import tipoExamenRoutes from './routes/tipoExamenRoutes';
 import resultadosRoutes from './routes/resultadosRoutes';
-import secuenciaRoutes from './routes/secuenciaRoutes';
+import secuenciaRoutes from './routes/secuencia';
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -16,7 +16,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use('/pacientes', pacientesRoutes);
 app.use('/tipoexamen', tipoExamenRoutes);
 app.use('/resultados', resultadosRoutes);
-app.use('/secuenciaRoutes', secuenciaRoutes);
+app.use('/secuencia', secuenciaRoutes);
 
 // Manejo de errores
 app.use((err: any, req: express.Request, res: express.Response, next: express.NextFunction) => {
